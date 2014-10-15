@@ -1,0 +1,13 @@
+{
+  "name": "angular-typescript-utils",
+  "version": "0.1.0",
+  "homepage": "https://github.com/malte2289/angular-typescript",
+  "authors": [
+    "malte <mrojahn89@googlemail.com>"
+  ],
+  "license": "GPLv2",
+  "devDependencies": {
+    "angularjs": "1.2.*",
+    "angular-mocks": "1.2.*"
+  }
+}
