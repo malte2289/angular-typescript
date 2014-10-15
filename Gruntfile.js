@@ -29,7 +29,7 @@ module.exports = function (grunt) {
                 build: {
                     // The source TypeScript files, http://gruntjs.com/configuring-tasks#files
                     src: ["src/**/*.ts"],
-                    // The source html files, https://github.com/grunt-ts/grunt-ts#html-2-typescript-support
+                    reference: "dist/angular-typescript.ts",
                     // If specified, generate an out.js file which is the merged js file
                     out: 'dist/angular-typescript-utils.js'
                 },
