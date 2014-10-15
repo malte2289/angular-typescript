@@ -69,4 +69,4 @@ var ng;
     })(ng.ts || (ng.ts = {}));
     var ts = ng.ts;
 })(ng || (ng = {}));
-//# sourceMappingURL=angular-typescript-utils.js.map
+//# sourceMappingURL=angular-typescript.js.map

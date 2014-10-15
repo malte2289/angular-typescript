@@ -29,9 +29,12 @@ module.exports = function (grunt) {
                 build: {
                     // The source TypeScript files, http://gruntjs.com/configuring-tasks#files
                     src: ["src/**/*.ts"],
-                    reference: "dist/angular-typescript.ts",
+
                     // If specified, generate an out.js file which is the merged js file
-                    out: 'dist/angular-typescript-utils.js'
+                    out: 'dist/angular-typescript.js',
+                    options :{
+                        declaration: true
+                    }
                 },
                 build_separate: {
                     src: ["src/**/*.ts"],
@@ -48,7 +51,7 @@ module.exports = function (grunt) {
                         sourceMap: true
                     },
                     files: {
-                        'dist/angular-typescript-utils.min.js': ['dist/angular-typescript-utils.js']
+                        'dist/angular-typescript.min.js': ['dist/angular-typescript.js']
                     }
                 }
             }
