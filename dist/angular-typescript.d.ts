@@ -1,4 +1,4 @@
-/// <reference path="../../../../typings/angularjs/angular.d.ts" " />
+/// <reference path="../../../../typings/angularjs/angular.d.ts" />
 declare module ng.ts {
     interface IScope extends ng.IScope {
         events?: Controller;

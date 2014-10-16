@@ -35,7 +35,7 @@ module.exports = function (grunt) {
                             // place files inline example
                             {
                                 pattern: '../typings/angularjs/angular.d.ts',
-                                replacement: '../../../../typings/angularjs/angular.d.ts" '
+                                replacement: '../../../../typings/angularjs/angular.d.ts'
                             }
                         ]
                     }
