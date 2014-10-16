@@ -1,6 +1,7 @@
 /**
  * Created by malte on 03.10.14.
  */
+///<reference path="../typings/angularjs/angular.d.ts"/>
 module ng.ts {
     export interface IScope extends ng.IScope
     {
