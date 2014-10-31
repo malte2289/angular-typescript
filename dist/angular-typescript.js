@@ -17,9 +17,42 @@ var ng;
     (function (ts) {
         var Directive = (function () {
             function Directive() {
+                var _this = this;
+                this.compile = function (tElement, tAttrs, transclude) {
+                    if (_this.compileFn !== Directive.prototype.compileFn) {
+                        _this.compileFn(tElement, tAttrs, transclude);
+                    }
+                    return {
+                        pre: function (scope, iElement, iAttrs, controller, transcludeFn) {
+                            if (_this.preLink !== Directive.prototype.preLink) {
+                                _this.preLink(scope, iElement, iAttrs, controller, transcludeFn);
+                            }
+                        },
+                        post: function (scope, iElement, iAttrs, controller, transcludeFn) {
+                            if (_this.postLink !== Directive.prototype.postLink) {
+                                _this.postLink(scope, iElement, iAttrs, controller, transcludeFn);
+                            }
+                            if (_this.onDestroy !== Directive.prototype.onDestroy) {
+                                scope.$on('$destroy', _this.onDestroy);
+                            }
+                        }
+                    };
+                };
             }
             Directive.getInstance = function () {
                 throw new Error('This method is abstract');
+            };
+
+            Directive.prototype.compileFn = function (tElement, tAttrs, transclude) {
+            };
+
+            Directive.prototype.preLink = function (scope, iElement, iAttrs, controller, transcludeFn) {
+            };
+
+            Directive.prototype.postLink = function (scope, iElement, iAttrs, controller, transcludeFn) {
+            };
+
+            Directive.prototype.onDestroy = function (event) {
             };
             return Directive;
         })();

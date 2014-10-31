@@ -11,6 +11,14 @@ declare module ng.ts {
 declare module ng.ts {
     class Directive implements IDirective {
         static getInstance(): Function;
+        public compile: (tElement: JQuery, tAttrs: IAttributes, transclude: ITranscludeFunction) => {
+            pre: (scope: ng.IScope, iElement: JQuery, iAttrs: IAttributes, controller: Controller, transcludeFn: ITranscludeFunction) => void;
+            post: (scope: ng.IScope, iElement: JQuery, iAttrs: IAttributes, controller: Controller, transcludeFn: ITranscludeFunction) => void;
+        };
+        public compileFn(tElement: JQuery, tAttrs: IAttributes, transclude: ITranscludeFunction): void;
+        public preLink(scope: ng.IScope, iElement: JQuery, iAttrs: IAttributes, controller?: Controller, transcludeFn?: ITranscludeFunction): void;
+        public postLink(scope: ng.IScope, iElement: JQuery, iAttrs: IAttributes, controller?: Controller, transcludeFn?: ITranscludeFunction): void;
+        public onDestroy(event: IAngularEvent): void;
     }
 }
 declare module ng.ts {
